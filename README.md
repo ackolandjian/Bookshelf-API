@@ -15,13 +15,13 @@ You can either use:
  - a generic one accessible on: https://bookshelf-gme.cleverapps.io/books
 
 First:
-- Add retrofit dependencies (see course slides) to `build.gradle`
+- Add retrofit dependencies (see course slides) to `build.gradle` ✅
 
 Then:
-- Create a `BookService` interface
-- Add a `getAllBooks` function with annotations matching the API
-- Create an instance of `retrofit` and instantiate `BookService` with it in `MainActivity`
-- Call `getAllBooks` in the `onCreate` function and display the books returned by the server
+- Create a `BookService` interface ✅
+- Add a `getAllBooks` function with annotations matching the API ✅
+- Create an instance of `retrofit` and instantiate `BookService` with it in `MainActivity` ✅
+- Call `getAllBooks` in the `onCreate` function and display the books returned by the server ✅
 
 - Add a `createBook` function with annotations matching the API
 - Call `createBook` to post a new book to the server and then display the list of books (including the freshly created one)
