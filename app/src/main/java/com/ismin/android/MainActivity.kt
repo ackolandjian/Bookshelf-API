@@ -62,7 +62,7 @@ class MainActivity : AppCompatActivity(), BookCreator {
         val bookListFragment = BookListFragment.newInstance(bookshelf.getAllBooks())
 
         supportFragmentManager.beginTransaction()
-            .add(R.id.a_main_lyt_container, bookListFragment)
+            .replace(R.id.a_main_lyt_container, bookListFragment)
             .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE)
             .commit()
     }
