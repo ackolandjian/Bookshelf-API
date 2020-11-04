@@ -80,17 +80,21 @@ class MainActivity : AppCompatActivity(), BookCreator {
     }
 
     override fun onBookCreated(book: Book) {
-        bookshelf.addBook(book)
-        this.closeCreateFragment()
+        bookService.createBook(book).enqueue {
+            onResponse = {
+                bookshelf.addBook(it.body()!!)
+                closeCreateFragment()
+            }
+            onFailure = {
+                if (it != null) {
+                    displayErrorToast(it)
+                }
+            }
+        }
     }
 
     override fun closeCreateFragment() {
-        val bookListFragment = BookListFragment.newInstance(bookshelf.getAllBooks())
-
-        supportFragmentManager.beginTransaction()
-            .replace(R.id.a_main_lyt_container, bookListFragment)
-            .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE)
-            .commit()
+        displayList();
 
         a_main_btn_creation.visibility = View.VISIBLE
     }
