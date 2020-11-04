@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity(), BookCreator {
 
         val retrofit = Retrofit.Builder()
             .addConverterFactory(GsonConverterFactory.create())
-            .baseUrl("https://bookshelf-gme.cleverapps.com")
+            .baseUrl("https://bookshelf-gme.cleverapps.io")
             .build()
 
         bookService = retrofit.create(BookService::class.java)
