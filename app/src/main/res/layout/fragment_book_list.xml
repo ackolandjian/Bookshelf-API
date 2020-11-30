@@ -1,19 +1,30 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.ismin.android.BookListFragment">
+    tools:context="com.ismin.android.BookListFragment"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/f_book_list_search"
+        style="@style/Base.Widget.MaterialComponents.TextInputEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/recherche"
+        android:inputType="textPersonName"
+        android:textSize="18sp"
+        android:importantForAutofill="no" />
+
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/f_book_list_rcv_books"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        android:layout_height="wrap_content"
         tools:itemCount="10"
+        android:scrollbars="vertical"
         tools:listitem="@layout/row_book" />
 
-</FrameLayout>
+
+
+</LinearLayout>

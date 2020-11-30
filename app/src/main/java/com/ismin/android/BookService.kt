@@ -12,4 +12,7 @@ interface BookService {
 
     @POST("books")
     fun createBook(@Body() book: Book): Call<Book>
+
+    @GET(":title")
+    fun getBook() : Call<Book>
 }
