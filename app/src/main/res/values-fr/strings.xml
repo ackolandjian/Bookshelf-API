@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="app_name">Bookshelf</string>
-    <string name="add_a_book">Ajouter un livre</string>
-    <string name="title">Titre</string>
-    <string name="date">Date</string>
-    <string name="sauvegarder">Sauvegarder</string>
-    <string name="author">Auteur</string>
-</resources>
